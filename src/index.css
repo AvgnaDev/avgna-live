@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* FontFamily */
+  --fonts-SSP: "Source Sans Pro", sans-serif;
+  --font-italic: "Italianno", cursive;
+  /* Background Color */
+  --background-bg: #fafcff;
+  /* Max width */
+  --maxWidth: 1140px;
+  --clipPath: polygon(100% 0, 0% 100%, 100% 100%);
+}
+h1 {
+  @apply text-8xl;
+}
+h2 {
+  @apply text-4xl;
+}
+
+@layer components {
+  .button {
+    @apply px-4 py-2 font-[450] tracking-wide rounded outline-none;
+  }
+  .button--action {
+    @apply bg-[#00c7d4ff]/60 text-white hover:bg-[#00c7d4ff];
+  }
+  .button--success {
+    @apply bg-green-500 text-white hover:bg-green-400;
+  }
+  .button--warning {
+    @apply bg-red-500 text-white hover:bg-red-400;
+  }
+}
+
+li {
+  @apply font-[600] tracking-wide uppercase;
+}
+input {
+  @apply py-2 z-10 px-4 border-0 focus:outline-none focus:ring-2 focus:to-blue-500 rounded;
+}
+textarea {
+  @apply py-2 z-10 px-4 border-0 focus:outline-none focus:ring-2 focus:to-blue-500 rounded;
+}
+.liHover {
+  @apply hover:bg-green-800 hover:text-white;
+}

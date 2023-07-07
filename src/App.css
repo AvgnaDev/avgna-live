@@ -1,0 +1,27 @@
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.horizontalLine {
+  position: relative;
+  /*  new lines  */
+  /* max-width: 250px; */
+  text-align: center;
+}
+.horizontalLine::before {
+  content: " ";
+  display: block;
+  height: 3px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #00c7d4;
+}
+/* 4 bgClip */
+.bgClip {
+  background-image: url("./assets/images/forYear.jpeg");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
