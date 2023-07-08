@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./layout/Header";
 import Home from "./pages/home/Home";
 import Footer from "./layout/Footer";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Outlet } from "react-router-dom";
 import AboutPage from "./pages/about/AboutPage";
 import ServicesPage from "./pages/services/ServicesPage";
 import ContactPage from "./pages/contact/ContactPage";
@@ -38,21 +38,24 @@ function App() {
           <> */}
         {/* <Header /> */}
 
-        <Routes>
+        {/* <Routes> */}
           {/* <Route path="/" element={<Home />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="services" element={<ServicesPage />} />
               <Route path="contact" element={<ContactPage />} />
             <Route path="*" element={<Error />} /> */}
-          <Route path="/" element={<FrontendLayout />}>
+
+
+
+          {/* <Route path="/" element={<FrontendLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="services" element={<ServicesPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="*" element={<Error errMsg="Page not Found" />} />
-          </Route>
+          </Route> */}
 
-
+          <Outlet />
           {/* Backend ADMIN PANEL Layout */}
 
 
@@ -71,7 +74,9 @@ function App() {
           </Route> */}
 
           
-        </Routes>
+        {/* </Routes> */}
+
+
         {/* <Footer /> */}
         {/* </>
         )}
