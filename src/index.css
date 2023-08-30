@@ -4,12 +4,17 @@
 
 :root {
   /* FontFamily */
-  --fonts-SSP: "Source Sans Pro", sans-serif;
+  /* --fonts-SSP: "Source Sans Pro", sans-serif; */
+  /* --fonts-SSP: "Hind Siliguri", sans-serif; */
+  /* --fonts-SSP: "Open Sans", sans-serif; */
+  --fonts-SSP: "Poppins", sans-serif;
+  /* --fonts-wt: "300"; */
   --font-italic: "Italianno", cursive;
   /* Background Color */
   --background-bg: #fafcff;
   /* Max width */
   --maxWidth: 1140px;
+  --activeColor: red;
   --clipPath: polygon(100% 0, 0% 100%, 100% 100%);
 }
 h1 {
@@ -18,7 +23,9 @@ h1 {
 h2 {
   @apply text-4xl;
 }
-
+.active{
+  color: var(--activeColor)
+}
 @layer components {
   .button {
     @apply px-4 py-2 font-[450] tracking-wide rounded outline-none;
@@ -34,6 +41,15 @@ h2 {
   }
 }
 
+@layer utilities{
+  .box::before{
+    @apply content-[''] absolute w-1/2 h-full border-b-4 border-l-4 bottom-0 left-0
+  }
+  .box::after{
+    @apply content-[''] absolute w-1/2 h-full border-t-4 border-r-4 right-0 top-0 
+  }
+}
+
 li {
   @apply font-[600] tracking-wide uppercase;
 }
@@ -45,4 +61,7 @@ textarea {
 }
 .liHover {
   @apply hover:bg-green-800 hover:text-white;
+}
+.customFont a{
+ @apply text-[18px] font-[400]
 }

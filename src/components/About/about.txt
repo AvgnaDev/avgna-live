@@ -1,0 +1,42 @@
+<div className="p-4 relative">
+{/* <h2 className="relative horizontalLine font-bold max-w-[250px]">
+  About Us
+</h2> */}
+<h2 className="font-bold relative before:absolute before:bg-[#00c7d4] before:w-24 before:top-10  before:h-1">
+  About Us
+</h2>
+<div className="flex relative flex-col md:flex-row justify-bewteen items-center">
+  {/* {aboutData.map((items) => {
+    return ( */}
+      <React.Fragment>
+        <div className="md:w-1/2 mt-4 relative z-20 overflow-hidden">
+        <p className="text-sm sm:text-xl md:text-2xl md:px-8">
+        <span className="text-[#00c7d4ff] tracking-wider text-6xl italic m-0 p-0 leading-none">A</span> vgna holds professional experience in Digital transformation projects such as Cloud Adoption, Data strategization. Additionally, we specialize in developing PoCs for your initial ideas and ensure end to end delivery to Production such as mobile app development, e-commerce website, etc. However, our pool of consultants with vanilla technology experience such as java, dotnet, mainframes must not be underestimated.
+        {/* {items.about} */}
+      </p>
+          {/* Animation Triangle */}
+          <div className="absolute -z-10 -left-8 -top-12 animate-rotatingTriangle border-b-[50px] border-b-green-400/50 border-r-[25px] border-r-transparent  border-l-[25px] border-l-transparent"></div>
+          <div className="absolute -z-10 -left-12  animate-rotatingCricle w-14 h-14 p-4 rounded-full bg-red-100"></div>
+        </div>
+        <div className="z-30 md:w-1/2 flex justify-end items-end relative">
+      <div className="relative lg:px-16">
+        <h1 className="font-extrabold text-[460px] xs:text-[500px] sm:text-[520px] bgClip">
+          {/* {items.experiance} */}
+         3
+        </h1>
+        <span className="absolute left-4 sm:left-16 md:left-5 right-0 top-12 text-5xl font-italic">
+        Best of
+      </span>
+      <span className="absolute right-2 -sm:right-4 md:right-4 bottom-6 sm:bottom-20 block text-5xl font-italic">
+        worlds
+      </span>
+      </div>
+      <span className="absolute whitespace-nowrap md:text-right md:pr-4 -left-[15px] sm:left-0 md:left-0 mt-4 md:bottom-1 w-full right-20 tracking-[1.2px] block text-[19px] xs:text-[22px] md:text-4xl font-italic font-semibold">
+            Consulting, Development, Maintenance
+          </span>
+        </div>
+      </React.Fragment>
+    {/* );
+  })} */}
+</div>
+</div>

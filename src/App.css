@@ -25,3 +25,6 @@ img {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+#teamLists .carousel .slide img{
+  width: auto;
+}

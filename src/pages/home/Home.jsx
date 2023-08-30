@@ -11,18 +11,23 @@ import WhoServed from "../../components/home/who served/WhoServed";
 import OurTeam from "../../components/home/our team/OurTeam";
 import Testimonial from "../../components/home/testimonial/Testimonial";
 import { Outlet } from "react-router-dom";
+import TeamList from "../../components/home/our team/teamList/TeamList";
+import OurUSP from "../../components/home/choose philosophy/OurUSP";
 
 const Home = () => {
   return (
     <React.Fragment>
       <Banner />
       <AboutUs />
-      <Philosphy />
+      {/* <Philosphy /> */}
+      <OurUSP/>
       <BusinessGrowing />
       <Card />
-      <Testimonial />
-      <OurTeam />
+      {/* <Testimonial /> */}
+      {/* <OurTeam /> */}
       <WhoServed />
+       {/* TEAM MEMBERS */}
+      {/* <TeamList/> */}
     </React.Fragment>
   );
 };

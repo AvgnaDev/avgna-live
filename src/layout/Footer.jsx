@@ -4,7 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as FiIcons from "react-icons/fi";
 import * as GiIcons from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,13 +15,13 @@ const Footer = () => {
           backgroundImage: `url(${"https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600"})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/90 "></div>
+        <div className="absolute inset-0 bg-black/70 "></div>
 
         <div className="px-4 sm:px-0 max-w-maxWidth mx-auto py-20 text-white relative flex flex-wrap gap-2.5 justify-between h-full">
           <div className="w-[360px] p-4">
             <img
               src={logo}
-              className="w-[150px] h-[150px] invert p-4 contrast-200 -hue-rotate-60 saturate-200"
+              className="w-[150px] h-[150px] p-4"
             />
             <div>
               <div className="flex justify-center pointer-events-none items-start">
@@ -54,29 +54,29 @@ const Footer = () => {
           </div>
           <div className="w-[360px] p-4">
             <div className="flex items-center">
-              <h2 className="text-3xl font-semibold">Links</h2>
+              <h2 className="text-2xl font-medium">Links</h2>
               <hr className="w-1/2 border-gray-100/40 ml-3" />
             </div>
             <div className="my-4">
-              <ul className="space-y-4">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/services">Services</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact Us</Link>
-                </li>
+              <ul className="space-y-4 flex flex-col">
+                {/* <li> */}
+                  <NavLink to="/avgna-live/">Home</NavLink>
+                {/* </li> */}
+                {/* <li> */}
+                  <NavLink to="/avgna-live/about">About</NavLink>
+                {/* </li> */}
+                {/* <li> */}
+                  <NavLink to="/avgna-live/services">Services & Products</NavLink>
+                {/* </li> */}
+                {/* <li> */}
+                  <NavLink to="/avgna-live/contact">Contact Us</NavLink>
+                {/* </li> */}
               </ul>
             </div>
           </div>
           <div className="w-[360px] p-4">
             <div className="flex items-center mb-6">
-              <h2 className="text-3xl font-semibold">Newsletter</h2>
+              <h2 className="text-2xl font-medium">Newsletter</h2>
               <hr className="w-1/2 border-gray-100/40 ml-3" />
             </div>
             <div>
@@ -92,14 +92,20 @@ const Footer = () => {
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="rounded-full border p-2 bg-white">
-                  <FaIcons.FaFacebookF fill="#3b5998" />
+                <span onClick={() => { alert("Comming soon...") }} className="rounded-full border p-2 bg-white">
+                  <Link to="#">
+                    <FaIcons.FaFacebookF fill="#3b5998" />
+                  </Link>
                 </span>
-                <span className="rounded-full border p-2 bg-white">
-                  <FaIcons.FaTwitter fill="#00acee" />
+                <span onClick={() => { alert("Comming soon...") }} className="rounded-full border p-2 bg-white">
+                  <Link to="#">
+                    <FaIcons.FaTwitter fill="#00acee" />
+                  </Link>
                 </span>
-                <span className="rounded-full border p-2 bg-white">
-                  <FaIcons.FaInstagram className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+                <span onClick={() => { alert("Comming soon...") }} className="rounded-full border p-2 bg-white">
+                  <Link to="#">
+                    <FaIcons.FaInstagram className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+                  </Link>
                 </span>
                 <span className="rounded-full border p-2 bg-white">
                   <Link

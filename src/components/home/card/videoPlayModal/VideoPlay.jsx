@@ -4,7 +4,7 @@ import productVideoPlay from "../../../../assets/videos/product.mp4";
 const VideoPlay = ({ productVideo }) => {
   return (
     <React.Fragment>
-      <div className="fixed z-50 inset-0 bg-black/70 backdrop-blur-md flex justify-center items-center">
+      <div className="fixed z-[90] inset-0 bg-black/70 backdrop-blur-md flex justify-center items-center">
         <div className="w-3/5 h-3/4 flex items-start">
           <video
             src={productVideoPlay}

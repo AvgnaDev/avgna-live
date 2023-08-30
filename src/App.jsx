@@ -24,7 +24,7 @@ function App() {
   let location = useLocation();
   const [adminLogin, setAdminLogin] = useState(false);
   useEffect(() => {
-    let crumb = location.pathname.split("/")[1];
+    let crumb = location.pathname.split("/")[2];
     if (crumb === "admin-login" || crumb === "admin-dashboard") {
       setAdminLogin(true);
     }
@@ -38,7 +38,7 @@ function App() {
           <> */}
         {/* <Header /> */}
 
-        {/* <Routes> */}
+        <Routes>
           {/* <Route path="/" element={<Home />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="services" element={<ServicesPage />} />
@@ -47,34 +47,34 @@ function App() {
 
 
 
-          {/* <Route path="/" element={<FrontendLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="services" element={<ServicesPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="*" element={<Error errMsg="Page not Found" />} />
-          </Route> */}
+          <Route path="/avgna-live/" element={<FrontendLayout />}>
+            <Route path="/avgna-live/" element={<Home />} />
+            <Route path="/avgna-live/about" element={<AboutPage />} />
+            <Route path="/avgna-live/services" element={<ServicesPage />} />
+            <Route path="/avgna-live/contact" element={<ContactPage />} />
+            <Route path="/avgna-live/*" element={<Error errMsg="Page not Found" />} />
+          </Route>
 
           <Outlet />
           {/* Backend ADMIN PANEL Layout */}
 
 
-          {/* <Route path="/admin-login" element={<Login />} />
-          <Route path="/admin-dashboard" element={<Dashboard />}>
-            <Route path="/admin-dashboard" element={<ProtectedRoute />}>
-              <Route path="home" element={<DashboardHome />} />
-              <Route path="our-team" element={<OurTeam />} />
-              <Route path="about" element={<About />} />
-              <Route path="services" element={<Services />} />
+          {/* <Route path="/avgna-live/admin-login" element={<Login />} />
+          <Route path="/avgna-live/admin-dashboard" element={<Dashboard />}>
+            <Route path="/avgna-live/admin-dashboard" element={<ProtectedRoute />}>
+              <Route path="/avgna-live/admin-dashboard/home" element={<DashboardHome />} />
+              <Route path="/avgna-live/admin-dashboard/our-team" element={<OurTeam />} />
+              <Route path="/avgna-live/admin-dashboard/about" element={<About />} />
+              <Route path="/avgna-live/admin-dashboard/services" element={<Services />} />
               <Route
-                path="*"
+                path="/avgna-live/admin-dashboard/*"
                 element={<Error errMsg="Something went worng!" />}
               />
             </Route>
           </Route> */}
 
           
-        {/* </Routes> */}
+        </Routes>
 
 
         {/* <Footer /> */}

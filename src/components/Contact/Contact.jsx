@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import * as FaIcons from "react-icons/fa";
+import * as MdIcons from "react-icons/md";
+import map from '../../assets/images/map.png'
 
 const Contact = () => {
   const [contactDetails, setContactDetails] = useState({
@@ -29,15 +32,15 @@ const Contact = () => {
 
     const errors = {};
     if (!username) {
-      errors.username = "Please provide username*";
+      errors.username = "Required username*";
     }
     if (!email) {
-      errors.email = "Please provide email address*";
+      errors.email = "Required email*";
     } else if (!filter.test(email)) {
       errors.email = "Invalid email address";
     }
     if (!phone) {
-      errors.phone = "Please provide mobile*";
+      errors.phone = "Required phone*";
     } else if (phone.length === 10) {
       errors.phone = "Invalid phone number";
     }
@@ -75,10 +78,13 @@ const Contact = () => {
   // window.scrollTo(0, 0);
   return (
     <React.Fragment>
-      <div className="bg-gradient-to-r from-cyan-500/40 to-blue-500/90 py-8 w-full">
+      <div style={{
+        backgroundImage:`url(${map})`,
+        backgroundRepeat:'no-repeat'
+      }} className="py-8 w-full">
         <section className="text-gray-600 body-font relative">
-          <div className="container px-5 py-24 mx-auto flex md:flex-nowrap flex-wrap">
-            <div className="lg:w-2/3 md:w-2/3 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end  justify-between md:justify-start relative">
+          <div className="container px-5 pt-24 pb-14 mx-auto flex md:flex-nowrap flex-wrap">
+            {/* <div className="lg:w-2/3 md:w-2/3 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 sm:p-10 flex items-end  justify-between md:justify-start relative">
               <iframe
                 width="100%"
                 height="100%"
@@ -121,9 +127,37 @@ const Contact = () => {
                   </Link>
                 </div>
               </div>
+            </div> */}
+            <div className="flex-1 p-6 px-8">
+              <div className="py-4">
+              <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Get In Touch</h2>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione reiciendis quae itaque velit praesentium, animi impedit, suscipit nesciunt fuga provident ipsa error rerum fugiat. Cumque amet pariatur quaerat assumenda provident, earum magni commodi quibusdam, aliquam animi quo laborum? Repellat facilis nostrum ipsum, expedita quaerat quam deleniti reprehenderit doloribus placeat sunt!
+              </p>
+              <div>
+              <Link to="mailto:HR@avgna.com">
+                <div className="flex justify-start items-center pointer-events-none my-4 text-red-500">
+                  <MdIcons.MdEmail className="mr-2 text-sky-500" />
+                  <p>HR@avgna.com</p>
+                </div>
+              </Link>
+              <Link to="tel:7878181130">
+                <div className="flex justify-start pointer-events-none items-center my-4 text-red-500">
+                  <FaIcons.FaPhoneAlt className="mr-2 text-sky-500" />
+                  <p>+(91)-78781 81130</p>
+                </div>
+              </Link>
+              <div className="flex justify-center pointer-events-none items-start text-red-500">
+                <FaIcons.FaMapSigns className="text-xl mr-2 text-sky-500" />
+                <p>
+                  A-1304, SANGRIA, MEGAPOLIS, RAJIV GANDHI INTERNATIONAL IT
+                  PARK, PHASE 3 HINJAWADI PUNE MH 411057 IN
+                </p>
+              </div>
+              </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6">
-              <h2 className="text-gray-900 mb-1 font-semibold">Get In Touch</h2>
+            <div className="lg:w-1/3 md:w-1/2 bg-gray-100 backdrop-blur-[1px] flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6">
+              <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Get In Touch</h2>
               <p className="leading-relaxed mb-5 text-gray-600">
                 Any question or remarks? Just write a message
               </p>
@@ -195,6 +229,37 @@ const Contact = () => {
             </div>
           </div>
         </section>
+
+
+
+
+        <div className="text-center bg-white">
+          <main className="p-4 sm:w-4/5 mx-auto border-red-400">
+          <h2 className="font-semibold py-4 text-[#00c4ff]">Frequently Asked Questions</h2>
+          <p className="my-6">Please contact us if you cannot find an answer to your question, at  <Link to="mailto:customersupport@avgna.com" className="text-sky-600">customersupport@avgna.com</Link></p>
+            <div className="w-full sm:w-3/5 sm:mx-auto divide-y divide-gray-200 flex justify-center items-center flex-col mt-8">
+              <details className="w-full mb-2">
+                <summary className="py-3 cursor-pointer select-none w-full outline-none text-left font-semibold">What is the minimum duration of engagement with Avgna ?</summary>
+                <p className="pt-1 pb-3 px-4 text-left">There is no minimum or maximum duration. We believe in offering fair and just services. Based on our analysis of the request, we provide estimates of the efforts and can collaborate over different models such as T&M, Fixed Price, etc. that best meets your needs and budget.</p>
+              </details>
+              <details className="w-full border-b border-t mb-2">
+                <summary className="py-3 cursor-pointer select-none w-full outline-none text-left font-semibold">Does Avgna provide onsite and offshore services ?</summary>
+                <p className="pt-1 pb-3 px-4 text-left">Certainly, Avgna's USP is its wide network across different geographies. For close in-person collaboration, we ensure availability of our Consultants at Client Locations with our free governance across Europe, US and India. We have a widespread presence in India with possibility of services discharged from multiple locations in India in cost effective way.</p>
+              </details>
+              <details className="w-full border-b border-t mb-2">
+                <summary className="py-3 cursor-pointer select-none w-full outline-none text-left font-semibold">Is Avgna also involved in Training of resources ?</summary>
+                <p className="pt-1 pb-3 px-4 text-left">At Avgna, we truly understand the changing times and technology and are firm advocate of constant investment in upskilling and training. As such, we make constant endeavors to ensure our consultants are up to date with latest technologies and also offer training for Client resources to be abreast with technologies of future.</p>
+              </details>
+              <details className="w-full border-b border-t mb-2">
+                <summary className="py-3 cursor-pointer select-none w-full outline-none text-left font-semibold">What does Avgna specialize at ?</summary>
+                <p className="pt-1 pb-3 px-4 text-left">Avgna holds professional experience in Digital transformation projects such as Cloud Adoption, Data strategization. Additionally, we specialize in developing PoCs for your initial ideas and ensure end to end delivery to Production such as mobile app development, e-commerce website, etc. However, our pool of consultants with vanilla technology experience such as java, dotnet, mainframes must not be underestimated.</p>
+              </details>
+            </div>
+          </main>
+
+
+
+        </div>
         {messageSend && (
           <div className="fixed z-10 w-full top-0">
             <div className="bg-white font-semibold w-[20%] mx-auto p-4 text-center">

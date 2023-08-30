@@ -7,14 +7,16 @@ import Home from "./pages/home/Home.jsx";
 import AboutPage from "./pages/about/AboutPage.jsx";
 import ServicesPage from "./pages/services/ServicesPage.jsx";
 import ContactPage from "./pages/contact/ContactPage.jsx";
+import FrontendLayout from "./layout/FrontendLayout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/avgna-live/",
-    element: <App />,
+    element:<FrontendLayout /> ,
     children: [
       {
         path: "/avgna-live/",
+        index:true,
         element: <Home />,
       },
       {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
         element: <AboutPage />,
       },
       {
-        path: "/avgna-live/service",
+        path: "/avgna-live/services",
         element: <ServicesPage />,
       },
       {
@@ -37,11 +39,14 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-        {/* <BrowserRouter>
-          <App />
-        </BrowserRouter> */}
-         <RouterProvider router={router} />
-  </React.StrictMode>
+
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    // <React.StrictMode>
+    //     <BrowserRouter>
+    //       <App />
+    //     </BrowserRouter>
+      
+    <RouterProvider router={router} />
+       
+  // {/* </React.StrictMode> */}
 );
