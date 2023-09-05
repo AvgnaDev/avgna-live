@@ -8,8 +8,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Spinner from "../Spinner";
 import CircleAnimation from "../components/animation/CircleAnimation";
 import TriangleAnimation from "../components/animation/TriangleAnimation";
-
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import * as MdIcons from 'react-icons/md'
 import "react-tabs/style/react-tabs.css";
 const Header = () => {
   let location = useLocation();
@@ -37,7 +37,7 @@ const Header = () => {
     setDrawerStatus(!drawerStatus);
   };
 
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
 
 
@@ -59,22 +59,27 @@ const Header = () => {
   }, [document.cookie.split(',')[0]])
 
   // BACK TO TOP
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const [show, setShow] = useState(false)
-  // useEffect(() => {
-  //   const scrollHandler = () => {
-  //     console.log(window.scrollY)
-  //     if (window.scrollY>=200) {
-  //       setShow(true)
-  //     }
-  //     else {
-  //       setShow(false)
-  //     }
-  //     window.addEventListener('scroll', scrollHandler())
-  //   }
-  //   return () => {
-  //     window.removeEventListener('scroll', scrollHandler())
-  //   }
-  // }, [])
+  useEffect(() => {
+    let scrollHandler = () => {
+      if (window.scrollY > 400) {
+        setShow(true)
+      }
+      else {
+        setShow(false)
+      }
+    }
+    window.addEventListener('scroll', scrollHandler)
+    return () => {
+      window.removeEventListener('scroll', scrollHandler)
+    }
+  }, [show])
 
   return (
     <React.Fragment>
@@ -82,7 +87,7 @@ const Header = () => {
         {/* <SubHeader /> */}
         {/* END TABS */}
 
-        <div className="w-full bg-gradient-to-r from-sky-100/[0.75] to-sky-100 drop-shadow-md backdrop-blur-sm">
+        <div className="w-full bg-gradient-to-r from-sky-100/[0.75] to-sky-200 drop-shadow-md backdrop-blur-sm">
           <div className="max-w-maxWidth mx-auto px-6 py-2 lg:py-3 lg:px-6 xl:px-0 flex justify-between items-center">
             {/* Left Menu Div */}
             {/* <div className="hidden lg:block">
@@ -105,19 +110,19 @@ const Header = () => {
             <div className="hidden lg:block">
               <ul className="flex items-center space-x-6 customFont">
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/" className='hover:text-red-500'>Home</NavLink>
+                  <NavLink to="/avgna-live/" className='hover:text-[--activeColor]'>Home</NavLink>
                 </li>
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/about" className='hover:text-red-500'>About Us</NavLink>
+                  <NavLink to="/avgna-live/about" className='hover:text-[--activeColor]'>About Us</NavLink>
                 </li>
                 {/* <li className="text-xl">
                   <NavLink to="#">Products</NavLink>
                 </li> */}
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/services" className='hover:text-red-500'>Services & Products</NavLink>
+                  <NavLink to="/avgna-live/services" className='hover:text-[--activeColor]'>Services & Products</NavLink>
                 </li>
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/contact" className='hover:text-red-500'>Contact Us</NavLink>
+                  <NavLink to="/avgna-live/contact" className='hover:text-[--activeColor]'>Contact Us</NavLink>
                 </li>
                 {/* <BiIcons.BiSearchAlt2 className="text-xl" /> */}
               </ul>
@@ -154,7 +159,7 @@ const Header = () => {
                 X
               </span>
               <ul className="">
-                {/* <li className="px-1 py-2 hover:bg-slate-200">
+                <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
                     to="/avgna-live/"
@@ -162,7 +167,7 @@ const Header = () => {
                   >
                     Home
                   </NavLink>
-                </li> */}
+                </li>
                 <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
@@ -206,15 +211,16 @@ const Header = () => {
         </div>
       }
       <Link to='https://wa.me/917878181130' target="_blank">
-        <div className="fixed bottom-0 left-0 z-[60] bg-slate-200 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center">
+        <div className="fixed bottom-0 right-0 z-[60] bg-slate-200 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center">
           <img src={whatapps} alt="whatsapps-logo" />
         </div>
       </Link>
 
       {
         show &&
-        <div className="fixed bottom-0 right-0 z-[60] bg-slate-200 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center">
-          <img src={whatapps} alt="whatsapps-logo" />
+        <div onClick={scrollToTop} className="fixed bottom-1/4 border-2 border-sky-500 right-0 z-[60] bg-slate-100 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center cursor-pointer">
+          {/* <img src={whatapps} alt="whatsapps-logo" /> */}
+          <MdIcons.MdKeyboardDoubleArrowUp fontSize={30} className="animate-bounce text-[#00c7d4]"/>
         </div>
       }
 

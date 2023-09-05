@@ -1,6 +1,6 @@
 @keyframes slide {
     from {
-      transform: translateX(230px);
+      transform: translateX(20px);
     }
     to {
       transform: translateX(-40%);
@@ -45,7 +45,5 @@
   }
   
   .logos-slide img {
-    /* height: 100px;
-    width: 100px; */
     margin: 0 30px;
   }

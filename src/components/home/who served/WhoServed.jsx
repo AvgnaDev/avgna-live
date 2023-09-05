@@ -12,13 +12,13 @@ const WhoServed = () => {
     <React.Fragment>
       <div className="pt-20 pb-4">
         <div className="text-center relative pb-8">
-          <h2 className="text-[#00c7d6]">Our collaborations</h2>
-          <p className="text-2xl font-bold relative before:absolute before:bg-[#00c7d4] before:w-36 before:top-7  before:h-1">
+          <h2 className="text-[#00c7d6] px-3 sm:px-0">Our collaborations</h2>
+          <p className="text-xl xs:text-2xl mt-4 relative"> {/*before:absolute before:bg-[#00c7d4] before:w-36 before:top-7 before:h-1*/}
             Partnerships for Innovation & Mutual Success
           </p>
         </div>
         <div className=" mb-6">
-          <div className="flex flex-wrap justify-between gap-5 sm:px-5 w-full">
+          <div className="flex flex-wrap justify-center sm:justify-between gap-5 sm:px-5 w-full">
             <div
               className="bg-transparent w-[204px] text-center hover:shadow-xl hover:shadow-sky-200 p-2 flex flex-col justify-center items-center"
               data-aos="fade-up"

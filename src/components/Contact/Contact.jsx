@@ -6,6 +6,7 @@ import * as MdIcons from "react-icons/md";
 import map from '../../assets/images/map.png'
 
 const Contact = () => {
+  window.scrollTo(0,0)
   const [contactDetails, setContactDetails] = useState({
     username: "",
     email: "",
@@ -26,7 +27,7 @@ const Contact = () => {
   const [errorStatus, setErrorStatus] = useState(false);
   // VALIDATION
   const Validation = () => {
-    const { username, email, phone } = contactDetails;
+    const { username, email, phone ,message } = contactDetails;
     var filter =
       /^(([^<>()/[\]\\.,;:\s@"]+(\.[^<>()/[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -41,8 +42,12 @@ const Contact = () => {
     }
     if (!phone) {
       errors.phone = "Required phone*";
-    } else if (phone.length === 10) {
+    } else if (phone.length > 10 || phone.length < 10) {
       errors.phone = "Invalid phone number";
+    }
+    if(!message){
+      errors.message = "Required message*";
+
     }
     return errors;
   };
@@ -50,9 +55,10 @@ const Contact = () => {
   const mailSend = async () => {
     const formErrors = Validation();
     if (Object.keys(formErrors).length > 0) {
-      setErrormsg(formErrors);
       setErrorStatus(true);
+      setErrormsg(formErrors);
     } else {
+      setErrorStatus(false);
       await axios
         .post("http://localhost:9090/send-contact-message", contactDetails)
         .then((res) => {
@@ -128,35 +134,37 @@ const Contact = () => {
                 </div>
               </div>
             </div> */}
-            <div className="flex-1 p-6 px-8">
+            <div className="flex-1 py-6 px-0 sm:px-8">
               <div className="py-4">
-              <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Get In Touch</h2>
+              <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Reach out to us at:</h2>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione reiciendis quae itaque velit praesentium, animi impedit, suscipit nesciunt fuga provident ipsa error rerum fugiat. Cumque amet pariatur quaerat assumenda provident, earum magni commodi quibusdam, aliquam animi quo laborum? Repellat facilis nostrum ipsum, expedita quaerat quam deleniti reprehenderit doloribus placeat sunt!
+              <p className="text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione reiciendis quae itaque velit praesentium, animi impedit, suscipit nesciunt fuga provident ipsa error rerum fugiat. Cumque amet pariatur quaerat assumenda provident, earum magni commodi quibusdam, aliquam animi quo laborum? Repellat facilis nostrum ipsum, expedita quaerat quam deleniti reprehenderit doloribus placeat sunt!
               </p>
-              <div>
+              <div className="my-4">
               <Link to="mailto:HR@avgna.com">
-                <div className="flex justify-start items-center pointer-events-none my-4 text-red-500">
+                <div className="inline-flex justify-start items-center pointer-events-none text-[#236b72]">
                   <MdIcons.MdEmail className="mr-2 text-sky-500" />
-                  <p>HR@avgna.com</p>
+                  <p className="sm:text-xl">HR@avgna.com</p>
                 </div>
               </Link>
+              <div>
               <Link to="tel:7878181130">
-                <div className="flex justify-start pointer-events-none items-center my-4 text-red-500">
+                <div className="inline-flex justify-start pointer-events-none items-center my-4 text-[#236b72]">
                   <FaIcons.FaPhoneAlt className="mr-2 text-sky-500" />
-                  <p>+(91)-78781 81130</p>
+                  <p className="sm:text-xl">+(91)-78781 81130</p>
                 </div>
               </Link>
-              <div className="flex justify-center pointer-events-none items-start text-red-500">
-                <FaIcons.FaMapSigns className="text-xl mr-2 text-sky-500" />
-                <p>
+              </div>
+              <div className="flex justify-start pointer-events-none items-start text-[#236b72]">
+                <FaIcons.FaMapSigns className="text-2xl sm:text-xl mr-2 text-sky-500" />
+                <p className="sm:text-xl">
                   A-1304, SANGRIA, MEGAPOLIS, RAJIV GANDHI INTERNATIONAL IT
                   PARK, PHASE 3 HINJAWADI PUNE MH 411057 IN
                 </p>
               </div>
               </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/2 bg-gray-100 backdrop-blur-[1px] flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6">
+            <div className="lg:w-1/3 md:w-1/2 bg-gray-100 backdrop-blur-[1px] flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-4 sm:px-6 py-6">
               <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Get In Touch</h2>
               <p className="leading-relaxed mb-5 text-gray-600">
                 Any question or remarks? Just write a message
@@ -218,6 +226,11 @@ const Contact = () => {
                   onChange={(e) => contactOnchangeHandler(e)}
                   className="w-full focus:border-none rounded border focus:ring-[#00c7d4] focus:ring-2 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
+                 {errorStatus && (
+                  <span className="font-medium text-sm text-red-500">
+                    {errormsg.message}
+                  </span>
+                )}
               </div>
               <button
                 onClick={mailSend}
@@ -235,7 +248,7 @@ const Contact = () => {
 
         <div className="text-center bg-white">
           <main className="p-4 sm:w-4/5 mx-auto border-red-400">
-          <h2 className="font-semibold py-4 text-[#00c4ff]">Frequently Asked Questions</h2>
+          <h2 className="py-4 text-[#00c4ff]">Frequently Asked Questions</h2>
           <p className="my-6">Please contact us if you cannot find an answer to your question, at  <Link to="mailto:customersupport@avgna.com" className="text-sky-600">customersupport@avgna.com</Link></p>
             <div className="w-full sm:w-3/5 sm:mx-auto divide-y divide-gray-200 flex justify-center items-center flex-col mt-8">
               <details className="w-full mb-2">

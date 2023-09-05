@@ -11,8 +11,10 @@ import softwareDev from "../../../assets/images/softwareDev.jpg"
 import softwareDev1 from "../../../assets/images/softwareDev1.png"
 import softwareDevv from "../../../assets/images/softwareDevv.jpg"
 import support from "../../../assets/images/support.jpg"
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
+  const navigate = useNavigate();
   const [softwareDeveloper, setSoftwareDeveloper] = useState(false);
   const softwareDeveloperModal = () => {
     setSoftwareDeveloper(!softwareDeveloper);
@@ -80,7 +82,7 @@ const Card = () => {
             </div>
           </div> */}
           {/* PRODUCTS */}
-          <div className="rounded w-[300px] hover:-translate-y-2 transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
+          {/* <div className="rounded w-[300px] hover:-translate-y-2 transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
             <img className="h-[180px] rounded-t" src={remedi360} />
             <div className="text-center p-6">
               <p className="text-center px-4 py-2 text-xl font-bold">
@@ -90,7 +92,20 @@ const Card = () => {
                 Learn more
               </button>
             </div>
-          </div>
+          </div> */}
+          <div className="group overflow-hidden relative rounded w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
+              <img className="rounded-t" src={remedi360} />
+              <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
+                <p className="text-center px-4 py-2 text-xl font-bold">
+                  ReMedi360
+                </p>
+                <div>
+                  <button onClick={productVideo} className="button button--action">
+                    Watch video
+                  </button>
+                </div>
+              </div>
+            </div>
           {/* <div className="rounded w-[300px] hover:-translate-y-2 transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
             <img className="h-[180px] w-[80%] mx-auto rounded-t" src={bison} />
             <div className="text-center p-6">
@@ -100,12 +115,12 @@ const Card = () => {
           </div> */}
         </div>
         <div className="flex justify-center">
-          <button className="button button--action my-4 flex items-center">
+          <button onClick={() => navigate('/avgna-live/services')} className="button button--action my-4 flex items-center">
             More Services
-            <MdIcons.MdOutlineKeyboardArrowRight className="text-xl pt-1" />
+            {/* <MdIcons.MdOutlineKeyboardArrowRight className="text-xl pt-1" /> */}
           </button>
         </div>
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-100/[0.75] to-sky-100 -z-10 sm:skew-x-[-230deg]"></div>
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-sky-100 to-sky-200 -z-10 sm:skew-x-[-230deg]"></div>
         {softwareDeveloper && (
           <SoftwareDevelopment
             softwareDeveloperModal={softwareDeveloperModal}

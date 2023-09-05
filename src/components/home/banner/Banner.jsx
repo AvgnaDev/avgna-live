@@ -1,5 +1,7 @@
 import React from "react";
 import bannerImg from "../../../assets/images/bannerImgg.jpeg";
+import aboutPages from '../../../assets/images/aboutpage.avif'
+
 // import programmerImg from "../../../assets/images/programmer.jfif";
 // import bbvid from "../../../assets/videos/backgroundVideo.mp4";
 import { Typewriter } from "react-simple-typewriter";
@@ -12,7 +14,7 @@ const Banner = () => {
       <div
         className="h-[350px] sm:h-screen mx-auto bg-local bg-no-repeat bg-cover relative"
         style={{
-          backgroundImage: `url(${bannerImg})`,
+          backgroundImage: `url(${aboutPages})`,
           backgroundPosition:'center center',
           backgroundAttachment:'fixed'
         
@@ -30,7 +32,7 @@ const Banner = () => {
                     loop={false}
                     cursor
                     cursorStyle="_"
-                    typeSpeed={60}
+                    typeSpeed={50}
                     deleteSpeed={50}
                     delaySpeed={1000}
                   />

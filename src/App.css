@@ -25,6 +25,9 @@ img {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-#teamLists .carousel .slide img{
+/* #teamLists .carousel .slide img{
   width: auto;
+} */
+#teamLists .carousel .slide img{
+  width: 120px !important;
 }

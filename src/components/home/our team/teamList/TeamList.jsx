@@ -1,20 +1,21 @@
 import React from 'react'
 import { Carousel } from "react-responsive-carousel";
+import  nikhil from '../../../../assets/images/nikhil.jpg'
 
 
 const TeamList = () => {
   return (
     <div id='teamLists' className="max-w-maxWidth mx-auto pt-4 mt-4 mb-20 text-center">
-     <h2 className="text-[#00c7d6]">Our Team Members</h2>
-    <Carousel
-      infiniteLoop={true}
-      showStatus={false}
-      showIndicators={false}
-      stopOnHover={false}
-      autoPlay={true}
-      showThumbs={false}
-      showArrows={false}
-    >
+      <h2 className="text-[#00c7d6] text-3xl sm:text-4xl px-2 xs:px-0">Our Team Members</h2>
+      <Carousel
+        infiniteLoop={true}
+        showStatus={false}
+        showIndicators={false}
+        stopOnHover={false}
+        autoPlay={true}
+        showThumbs={false}
+        showArrows={false}
+      >
         <div className="p-4 md:w-[70%] md:mx-auto w-full">
           <div className="h-full bg-gray-100 p-8 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
@@ -22,10 +23,10 @@ const TeamList = () => {
             </svg>
             <p className="leading-relaxed mb-6 font-medium">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
             <a className="flex flex-col sm:flex-row justify-start items-center">
-              <img alt="testimonial" src="https://dummyimage.com/106x106" className="w-20 h-20 rounded-full flex-shrink-0 object-cover object-center border" />
+              <img alt="testimonial" src={nikhil} className="rounded-full h-[120px] align-middle max-w-full flex-shrink-0 object-cover object-center border" />
               <span className="flex flex-col pl-4">
-                <span className="title-font font-medium text-gray-900">Holden Caulfield</span>
-                <span className="text-gray-500 text-sm text-left">UI DEVELOPER</span>
+                <span className="title-font font-medium text-gray-900 text-left">Nikhil Lohani</span>
+                <span className="text-gray-500 text-sm text-left">BUSINESS DEVELOPMENT</span>
               </span>
             </a>
           </div>
@@ -37,7 +38,7 @@ const TeamList = () => {
             </svg>
             <p className="leading-relaxed mb-6 font-medium">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
             <a className="flex flex-col sm:flex-row justify-start items-center">
-              <img alt="testimonial" src="https://dummyimage.com/106x106" className="w-20 h-20 rounded-full flex-shrink-0 object-cover object-center border" />
+              <img alt="testimonial" src="https://dummyimage.com/106x106" className="rounded-full h-[120px] align-middle max-w-full flex-shrink-0 object-cover object-center border" />
               <span className="flex flex-col pl-4">
                 <span className="title-font font-medium text-gray-900">Holden Caulfield</span>
                 <span className="text-gray-500 text-sm text-left">UI DEVELOPER</span>
@@ -45,9 +46,9 @@ const TeamList = () => {
             </a>
           </div>
         </div>
-    </Carousel>
-           
-  </div>
+      </Carousel>
+
+    </div>
   )
 }
 

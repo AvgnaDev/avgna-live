@@ -11,7 +11,7 @@ const Testimonial = () => {
         <div className="max-w-maxWidth mx-auto">
           <div className="text-center relative mb-12">
             <h2 className="text-[#00c7d6]">Testimonial</h2>
-            <p className="text-xl px-3 relative before:absolute before:bg-[#00c7d4] before:w-14 before:top-7  before:h-1">
+            <p className="text-xl px-3 relative">
               {/* Meet our team of
               <span className="font-italic"> creators, designers, </span>
               and world-class

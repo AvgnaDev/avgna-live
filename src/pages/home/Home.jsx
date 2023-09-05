@@ -15,6 +15,7 @@ import TeamList from "../../components/home/our team/teamList/TeamList";
 import OurUSP from "../../components/home/choose philosophy/OurUSP";
 
 const Home = () => {
+  window.scrollTo(0,0)
   return (
     <React.Fragment>
       <Banner />

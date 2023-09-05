@@ -3,7 +3,7 @@ import remedi360 from "../../assets/images/remedi360.png";
 import bison from "../../assets/images/bison.png";
 import VideoPlay from "../../components/home/card/videoPlayModal/VideoPlay";
 import softwareDev1 from "../../assets/images/softwareDev1.png"
-import softwareDevv from "../../assets/images/softwareDevv.jpg"
+import itconsult from "../../assets/images/itconsult.jpg"
 import support from "../../assets/images/support.jpg"
 
 const ServiceCard = () => {
@@ -52,7 +52,7 @@ const ServiceCard = () => {
           <div className="group overflow-hidden relative rounded w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
             <img
               className="rounded-t"
-              src={softwareDevv}
+              src={itconsult}
             />
             <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
               <p className="text-center py-2 text-xl font-bold">
@@ -69,28 +69,33 @@ const ServiceCard = () => {
         </div>
         {/* PRODUCTS */}
         <div className="relative my-6">
-          <h2 className=" text-[#00c7d6]">Featured products</h2>
-          <p className="w-full sm:text-xl px-4 mx-auto font-bold relative before:absolute before:bg-[#00c7d4] before:w-20 before:top-8 sm:before:top-7 my-6  before:h-1">
-            Building a good customer experience does not happen by accident,It
+          <h2 className="text-[#00c7d6]">Featured products</h2>
+          <p className="w-full sm:text-xl px-4 mx-auto relative">
+            Building a good customer experience does not happen by accident, it
             happens by design.
           </p>
-          <div className='flex items-center max-w-maxWidth mx-auto gap-6 p-4 justify-center flex-wrap'>
-            <div className="rounded w-[300px] hover:-translate-y-2 transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
-              <img className="h-[180px] rounded-t" src={remedi360} />
-              <div className="text-center p-6">
+          <div className='flex items-center max-w-maxWidth mx-auto gap-6 p-4 justify-center flex-wrap my-6'>
+            <div className="group overflow-hidden relative rounded w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
+              <img className="rounded-t" src={remedi360} />
+              <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center px-4 py-2 text-xl font-bold">
                   ReMedi360
                 </p>
-                <button onClick={productVideo} className="button button--action">
-                  Learn more
-                </button>
+                <div>
+                  <button onClick={productVideo} className="button button--action">
+                    Watch video
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="rounded w-[300px] hover:-translate-y-2 transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
-              <img className="h-[180px] w-[80%] mx-auto rounded-t" src={bison} />
-              <div className="text-center p-6">
+            <div className="group overflow-hidden relative rounded w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
+              <img className="mx-auto rounded-t" src={bison} />
+              <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center px-4 py-2 text-xl font-bold">BISON</p>
-                <button className="button button--action">Learn more</button>
+                <div>
+
+                  <button className="button button--action">Watch video</button>
+                </div>
               </div>
             </div>
           </div>

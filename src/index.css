@@ -14,7 +14,7 @@
   --background-bg: #fafcff;
   /* Max width */
   --maxWidth: 1140px;
-  --activeColor: red;
+  --activeColor: #12b0c9;
   --clipPath: polygon(100% 0, 0% 100%, 100% 100%);
 }
 h1 {
