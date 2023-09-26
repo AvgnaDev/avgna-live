@@ -44,7 +44,9 @@ const Header = () => {
   // ACCEPT COOKIES
   const [cookiesStatus, setCookiesStatus] = useState(true)
   const acceptCookies = () => {
-    document.cookie = `user=true,expires=${new Date(Date.now() + 25892000000)},HttpOnly=true`
+    var expiryDate = new Date();
+    expiryDate.setMonth(expiryDate.getMonth() + 1);
+    document.cookie = `user=true,Max-Age=${expiryDate},HttpOnly=true`
     setCookiesStatus(false)
 
     // console.log(document.cookie.split(',')[0])
@@ -211,14 +213,14 @@ const Header = () => {
         </div>
       }
       <Link to='https://wa.me/917878181130' target="_blank">
-        <div className="fixed bottom-0 right-0 z-[60] bg-slate-200 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center">
+        <div className="fixed bottom-8 right-0 z-[60] bg-slate-200 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center">
           <img src={whatapps} alt="whatsapps-logo" />
         </div>
       </Link>
 
       {
         show &&
-        <div onClick={scrollToTop} className="fixed bottom-1/4 border-2 border-sky-500 right-0 z-[60] bg-slate-100 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center cursor-pointer">
+        <div onClick={scrollToTop} className="fixed bottom-[23%] border-2 border-sky-500 right-0 z-[60] bg-slate-100 rounded-full mx-4 my-2 w-14 h-14 flex items-center justify-center cursor-pointer">
           {/* <img src={whatapps} alt="whatsapps-logo" /> */}
           <MdIcons.MdKeyboardDoubleArrowUp fontSize={30} className="animate-bounce text-[#00c7d4]"/>
         </div>

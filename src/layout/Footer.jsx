@@ -80,14 +80,15 @@ const Footer = () => {
               <hr className="w-1/2 border-gray-100/40 ml-3" />
             </div>
             <div>
-              <p>Send us a newsletter to get update</p>
+              <p>Send us a newsletter request to get updates</p>
               <div className="mt-10 mb-4 flex items-center">
                 <input
                   type="email"
                   placeholder="Enter your email address"
                   className="w-[85%] bg-white/20 focus:ring-[#3dc0ff] focus:ring-1 placeholder:italic placeholder:text-gray-200 text-white"
+                  disabled
                 />
-                <span className="bg-[#00c7d4] p-1 w-[15%] text-center cursor-pointer">
+                <span className="bg-[#00c7d4] p-1 w-[15%] text-center cursor-not-allowed">
                   <GiIcons.GiClick className="text-3xl" />
                 </span>
               </div>

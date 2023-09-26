@@ -1,6 +1,7 @@
 import React from "react";
 import bannerImg from "../../../assets/images/bannerImgg.jpeg";
-import aboutPages from '../../../assets/images/aboutpage.avif'
+// import aboutPages from '../../../assets/images/aboutpage.avif'
+import aboutPages from '../../../assets/images/aboutpagee.png'
 
 // import programmerImg from "../../../assets/images/programmer.jfif";
 // import bbvid from "../../../assets/videos/backgroundVideo.mp4";
@@ -12,19 +13,20 @@ const Banner = () => {
   return (
     <React.Fragment>
       <div
-        className="h-[350px] sm:h-screen mx-auto bg-local bg-no-repeat bg-cover relative"
+        className="h-[400px] sm:h-screen mx-auto bg-no-repeat relative"
         style={{
           backgroundImage: `url(${aboutPages})`,
-          backgroundPosition:'center center',
-          backgroundAttachment:'fixed'
-        
+          backgroundPosition: 'top',
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative w-full h-full flex">
-          <div className="w-full h-full flex justify-center items-center flex-col pl-4 pb-8 sm:p-8">
-            <div className="text-white/90 pl-4 sm:pl-0 mb-4">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold my-4">
+          <div className="w-full h-full flex justify-center items-center flex-col pb-8 sm:p-8">
+            <div className="text-white/90 sm:pl-0 mb-4">
+              <h1 className="text-5xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold my-4">
                 Accomplish <br />
                 <p className="drop-shadow-2xl bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 text-center">
                   <Typewriter

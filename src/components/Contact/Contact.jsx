@@ -138,7 +138,7 @@ const Contact = () => {
               <div className="py-4">
               <h2 className="text-xl sm:text-4xl text-gray-900 mb-1 font-semibold">Reach out to us at:</h2>
               </div>
-              <p className="text-xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione reiciendis quae itaque velit praesentium, animi impedit, suscipit nesciunt fuga provident ipsa error rerum fugiat. Cumque amet pariatur quaerat assumenda provident, earum magni commodi quibusdam, aliquam animi quo laborum? Repellat facilis nostrum ipsum, expedita quaerat quam deleniti reprehenderit doloribus placeat sunt!
+              <p className="text-xl">Our offices are open from Monday to Friday, 9:00am to 18:00pm IST (GMT+5:30). Do write to us via email or call us at following number to start the conversation.
               </p>
               <div className="my-4">
               <Link to="mailto:HR@avgna.com">
@@ -247,9 +247,9 @@ const Contact = () => {
 
 
         <div className="text-center bg-white">
-          <main className="p-4 sm:w-4/5 mx-auto border-red-400">
-          <h2 className="py-4 text-[#00c4ff]">Frequently Asked Questions</h2>
-          <p className="my-6">Please contact us if you cannot find an answer to your question, at  <Link to="mailto:customersupport@avgna.com" className="text-sky-600">customersupport@avgna.com</Link></p>
+          <main className="p-4 max-w-width mx-auto">
+          <h2 className="text-2xl md:text-4xl py-4 text-[#00c7d6]">Frequently Asked Questions</h2>
+          <p className="my-6 text-[16px] sm:text-2xl">Please contact us if you cannot find an answer to your question, at  <Link to="mailto:customersupport@avgna.com" className="text-sky-600">customersupport@avgna.com</Link></p>
             <div className="w-full sm:w-3/5 sm:mx-auto divide-y divide-gray-200 flex justify-center items-center flex-col mt-8">
               <details className="w-full mb-2">
                 <summary className="py-3 cursor-pointer select-none w-full outline-none text-left font-semibold">What is the minimum duration of engagement with Avgna ?</summary>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import remedi360 from "../../assets/images/remedi360.png";
 import remedi360 from "../../assets/images/remedi360.png";
 import bison from "../../assets/images/bison.png";
 import VideoPlay from "../../components/home/card/videoPlayModal/VideoPlay";
@@ -22,7 +23,7 @@ const ServiceCard = () => {
               // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDIj4ZSHqeJmuNv1Lez_x5QTq2f6M6tw65A&usqp=CAU"
               src={softwareDev1}
             />
-            <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
+            <div className="text-center flex flex-col justify-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
               <p className="text-center py-2 text-xl font-bold">
                 Software Development
               </p>
@@ -38,14 +39,14 @@ const ServiceCard = () => {
               src={support}
             // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZOZ9gaAYTz7eKzQFpC_-bbPYcivgBr6JXA&usqp=CAU"
             />
-            <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
+            <div className="text-center flex flex-col justify-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
               <p className="text-center py-2 text-xl font-bold">
                 IT Support
               </p>
               <p>
                 Get hold of the expert IT professionals with broad experience,
                 versatile technology and domain knowledge based on your needs with
-                complete flexibillity
+                complete flexibillity.
               </p>
             </div>
           </div>
@@ -54,7 +55,7 @@ const ServiceCard = () => {
               className="rounded-t"
               src={itconsult}
             />
-            <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
+            <div className="text-center flex flex-col justify-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
               <p className="text-center py-2 text-xl font-bold">
                 IT Consulting, Advisory, and Training
               </p>
@@ -70,17 +71,17 @@ const ServiceCard = () => {
         {/* PRODUCTS */}
         <div className="relative my-6">
           <h2 className="text-[#00c7d6]">Featured products</h2>
-          <p className="w-full sm:text-xl px-4 mx-auto relative">
-            Building a good customer experience does not happen by accident, it
-            happens by design.
+          <p className="w-full text-xl xs:text-2xl px-4 mx-auto relative">
+            We understand your business problems and we build digital solutions to address them
           </p>
-          <div className='flex items-center max-w-maxWidth mx-auto gap-6 p-4 justify-center flex-wrap my-6'>
+          <div className='flex max-w-maxWidth mx-auto gap-6 p-4 justify-center flex-wrap my-6'>
             <div className="group overflow-hidden relative rounded w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
-              <img className="rounded-t" src={remedi360} />
+              <img className="rounded-t h-full" src={remedi360} />
               <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center px-4 py-2 text-xl font-bold">
                   ReMedi360
                 </p>
+                <p>A digital platform for your complete health care solution.</p>
                 <div>
                   <button onClick={productVideo} className="button button--action">
                     Watch video
@@ -92,9 +93,9 @@ const ServiceCard = () => {
               <img className="mx-auto rounded-t" src={bison} />
               <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center px-4 py-2 text-xl font-bold">BISON</p>
+                <p>An inventory management software-as-a-service for your retail outlets.</p>
                 <div>
-
-                  <button className="button button--action">Watch video</button>
+                  <button disabled className="button button--action opacity-40 pointer-events-none">Watch video</button>
                 </div>
               </div>
             </div>

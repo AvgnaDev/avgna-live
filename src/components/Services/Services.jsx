@@ -6,12 +6,11 @@ const Services = () => {
   window.scrollTo(0, 0);
   return (
     <React.Fragment>
-      <div className="">
+      <div className="max-w-maxWidth mx-auto">
         <div className="text-center relative my-6">
           <h2 className=" text-[#00c7d6]">Featured services</h2>
-          <p className="w-full sm:text-xl px-4 sm:w-4/5 mx-auto relative">
-            Building a good customer experience does not happen by accident, it
-            happens by design.
+          <p className="w-full text-xl xs:text-2xl px-4 relative">
+          We work as a partner to your enterprise, understanding and fulfilling your IT needs
           </p>
         </div>
         {/* <Card /> */}

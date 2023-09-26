@@ -4,6 +4,10 @@ import useSWR from "swr";
 import axios from "axios";
 import aboutPages from '../../assets/images/aboutpage.avif'
 import bannerImg from "../../assets/images/bannerImgg.jpeg";
+import { Link } from "react-router-dom";
+import VideoPlay from "../home/card/videoPlayModal/VideoPlay";
+import AboutVideo from "./subComp/AboutVideo";
+
 
 
 const About = () => {
@@ -21,6 +25,12 @@ const About = () => {
   //       <Spinner /> Loading...
   //     </div>
   //   );
+
+   // PRODUCT VIDEO
+   const [videoDecide, setVideoDecide] = useState(false);
+   const AboutVideos = () => {
+     setVideoDecide(!videoDecide);
+   };
   return (
     <React.Fragment>
       <div className="bg-white relative rounded">
@@ -32,21 +42,24 @@ const About = () => {
             backgroundImage: `url(${bannerImg})`,
             backgroundPosition: 'center center',
             backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
             height: '90vh'
 
           }}
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="flex flex-col justify-center items-center h-full z-50">
             <div className="w-[90%] sm:w-[70%] mx-auto box relative overflow-hidden text-center">
               <div className="px-2 sm:px-9 py-12 space-y-4">
-                <h1 className='text-2xl xs:text-4xl md:text-8xl text-white uppercase font-bold tracking-[2px] drop-shadow-2xl'>About <span className="text-[#00c7d4]">Avgna</span> </h1>
-                <p className="text-white sm:w-[90%] mx-auto text-sm md:text-xl">
-                  We provide IT consulting, development, and management to businesses across the globe. We take pride in our customer-centric approach to solving business problems                </p>
+                <h1 className='text-3xl xs:text-4xl md:text-8xl text-white uppercase font-bold tracking-[2px] drop-shadow-2xl'>About <span className="text-[#00c7d4]">Avgna</span> </h1>
+                <p className="text-white sm:w-[90%] mx-auto text-xl md:text-xl">
+                  We provide IT consulting, development, and management to businesses across the globe. We take pride in our customer-centric approach to solving business problems.</p>
               </div>
             </div>
+            <button onClick={AboutVideos} className="button--action button z-10 mt-8">Watch video</button>
           </div>
         </div>
+        {videoDecide && <AboutVideo AboutVideo={AboutVideos} />}
       </div>
     </React.Fragment>
   );

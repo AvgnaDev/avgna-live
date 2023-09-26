@@ -11,7 +11,7 @@ const AvgnaCard = () => {
             <div className="py-12 px-4 sm:px-0 flex flex-wrap justify-around gap-8 space-y-3">
                 <div className='flex flex-col md:flex-row md:justify-between px-4 md:px-0 rounded hover:shadow-xl hover:shadow-sky-100'>
                     <div className='xs:w-[50%] xs:mx-auto md:w-[40%]'>
-                        <img src={mission} alt='mission' className='h-[255px] sm:h-[300px]' />
+                        <img src={mission} alt='mission' className='h-[255px] sm:h-[300px] py-4' />
                     </div>
                     <div
                         className="w-full md:w-[60%] sm:px-4 sm:py-2 flex justify-center items-start flex-col"
@@ -92,7 +92,7 @@ const AvgnaCard = () => {
                         </div>
                     </div>
                     <div className='xs:w-[50%] mx-auto md:w-[30%]'>
-                        <img src={competency} alt='competency' className='h-[200px] sm:h-[280px]' />
+                        <img src={competency} alt='competency' className='h-[200px] sm:h-[300px] py-2' />
                     </div>
                 </div>
 

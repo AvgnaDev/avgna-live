@@ -24,9 +24,9 @@ const AboutUs = () => {
   return (
     <React.Fragment>
       <div className="bg-white">
-        <div className="max-w-maxWidth xl:mx-auto mx-4 relative rounded md:p-0 sm:p-8 mb-2">
-          <div className="overflow-hidden relative mt-8">
-            <h2 className="p-4 text-2xl sm:text-4xl text-center z-50 text-[#00c7d6] relative"> {/*before:absolute before:inset-0 before:bg-[#00c7d4ff] before:w-14 before:left-[490px] before:top-14  before:h-1*/}
+        <div className="max-w-maxWidth xl:mx-auto mx-4 relative rounded md:p-0 sm:p-8">
+          <div className="overflow-hidden relative pt-8">
+            <h2 className="p-4 text-xl sm:text-4xl text-center z-50 text-[#00c7d6] relative"> {/*before:absolute before:inset-0 before:bg-[#00c7d4ff] before:w-14 before:left-[490px] before:top-14  before:h-1*/}
               We help you become IT efficient
             </h2>
             <div className="flex flex-col md:flex-row justify-between items-center h-full">

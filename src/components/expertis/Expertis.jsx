@@ -9,6 +9,12 @@ import dotnet from '../../assets/images/dotnet.png'
 import csharp from '../../assets/images/csharp.png'
 import java from '../../assets/images/java.png'
 import aws from '../../assets/images/aws.png'
+import python from '../../assets/images/python.png'
+import ios from '../../assets/images/ios.png'
+import android from '../../assets/images/android.png'
+
+
+
 
 
 const Expertis = () => {
@@ -21,7 +27,10 @@ const Expertis = () => {
                     <img alt="node" src={node} className="h-20" />
                     <img alt="dotnet" src={dotnet} className="h-20" />
                     <img alt="react" src={react} className="h-20" />
+                    <img alt="python" src={python} className="h-20" />
                     <img alt="java" src={java} className="h-20" />
+                    <img alt="ios" src={ios} className="h-20" />
+                    <img alt="android" src={android} className="h-20" />
                     <img alt="aws" src={aws} className="h-20" />
                     <img alt="angular" src={angular} className="h-20" />
                     <img alt="tailwind" src={tailwind} className="h-20" />
