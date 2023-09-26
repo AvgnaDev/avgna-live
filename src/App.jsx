@@ -47,12 +47,12 @@ function App() {
 
 
 
-          <Route path="/avgna-live/" element={<FrontendLayout />}>
-            <Route path="/avgna-live/" element={<Home />} />
-            <Route path="/avgna-live/about" element={<AboutPage />} />
-            <Route path="/avgna-live/services" element={<ServicesPage />} />
-            <Route path="/avgna-live/contact" element={<ContactPage />} />
-            <Route path="/avgna-live/*" element={<Error errMsg="Page not Found" />} />
+          <Route path="/" element={<FrontendLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/*" element={<Error errMsg="Page not Found" />} />
           </Route>
 
           <Outlet />

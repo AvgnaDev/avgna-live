@@ -11,28 +11,28 @@ import FrontendLayout from "./layout/FrontendLayout.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/avgna-live/",
+    path: "/",
     element:<FrontendLayout /> ,
     children: [
       {
-        path: "/avgna-live/",
+        path: "/",
         index:true,
         element: <Home />,
       },
       {
-        path: "/avgna-live/about",
+        path: "/about",
         element: <AboutPage />,
       },
       {
-        path: "/avgna-live/services",
+        path: "/services",
         element: <ServicesPage />,
       },
       {
-        path: "/avgna-live/contact",
+        path: "/contact",
         element: <ContactPage />,
       },
       {
-        path: "/avgna-live/*",
+        path: "/*",
         element: <Error errMsg="Page not Found"  />,
       },
     ],
