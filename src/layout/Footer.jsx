@@ -60,16 +60,16 @@ const Footer = () => {
             <div className="my-4">
               <ul className="space-y-4 flex flex-col">
                 {/* <li> */}
-                  <NavLink to="/avgna-live/">Home</NavLink>
+                  <NavLink to="/">Home</NavLink>
                 {/* </li> */}
                 {/* <li> */}
-                  <NavLink to="/avgna-live/about">About</NavLink>
+                  <NavLink to="/about">About</NavLink>
                 {/* </li> */}
                 {/* <li> */}
-                  <NavLink to="/avgna-live/services">Services & Products</NavLink>
+                  <NavLink to="/services">Services & Products</NavLink>
                 {/* </li> */}
                 {/* <li> */}
-                  <NavLink to="/avgna-live/contact">Contact Us</NavLink>
+                  <NavLink to="/contact">Contact Us</NavLink>
                 {/* </li> */}
               </ul>
             </div>

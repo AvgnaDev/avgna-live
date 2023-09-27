@@ -44,7 +44,7 @@ const Card = () => {
               // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDIj4ZSHqeJmuNv1Lez_x5QTq2f6M6tw65A&usqp=CAU"
               src={softwareDev1}
             />
-            <Link to='/avgna-live/services'>
+            <Link to='/services'>
               <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center py-2 text-2xl flex justify-center items-center h-full tracking-wider">
                   Software Development
@@ -62,7 +62,7 @@ const Card = () => {
               src={support}
             // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZOZ9gaAYTz7eKzQFpC_-bbPYcivgBr6JXA&usqp=CAU"
             />
-            <Link to='/avgna-live/services'>
+            <Link to='/services'>
               <div className="text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center py-2 text-2xl flex justify-center items-center h-full tracking-wider">
                   IT Support
@@ -100,7 +100,7 @@ const Card = () => {
           </div> */}
           <div className="group overflow-hidden relative rounded w-[350px] xs:w-[300px] transition-all duration-300 shadow hover:drop-shadow-xl bg-white">
             <img className="rounded-t h-full" src={remedi360} />
-            <Link to='/avgna-live/services'>
+            <Link to='/services'>
               <div className="flex space-y-2 flex-col justify-center text-center p-6 transition-all duration-1000 absolute top-0 group-hover:left-0 group-hover:right-0 -right-[100%] bg-sky-100 h-full w-full">
                 <p className="text-center px-4 py-2 text-2xl">
                   ReMedi360

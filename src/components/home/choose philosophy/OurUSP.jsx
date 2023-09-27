@@ -80,7 +80,7 @@ const OurUSP = () => {
                         </div>
                     </div>
                     <div className='flex justify-center items-center py-6'>
-                        <button onClick={() => navigate('/avgna-live/about')} className='button button--action my-4'>Know more</button>
+                        <button onClick={() => navigate('/about')} className='button button--action my-4'>Know more</button>
                     </div>
                 </div>
             </div>

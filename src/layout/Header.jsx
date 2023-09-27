@@ -104,7 +104,7 @@ const Header = () => {
             </div> */}
             {/* Logo */}
             <div className="w-[80px] h-[80px]">
-              <Link to="/avgna-live/">
+              <Link to="/">
                 <img src={logo} className="w-full drop-shadow-sm" />
               </Link>
             </div>
@@ -112,19 +112,19 @@ const Header = () => {
             <div className="hidden lg:block">
               <ul className="flex items-center space-x-6 customFont">
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/" className='hover:text-[--activeColor]'>Home</NavLink>
+                  <NavLink to="/" className='hover:text-[--activeColor]'>Home</NavLink>
                 </li>
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/about" className='hover:text-[--activeColor]'>About Us</NavLink>
+                  <NavLink to="/about" className='hover:text-[--activeColor]'>About Us</NavLink>
                 </li>
                 {/* <li className="text-xl">
                   <NavLink to="#">Products</NavLink>
                 </li> */}
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/services" className='hover:text-[--activeColor]'>Services & Products</NavLink>
+                  <NavLink to="/services" className='hover:text-[--activeColor]'>Services & Products</NavLink>
                 </li>
                 <li className="text-xl">
-                  <NavLink to="/avgna-live/contact" className='hover:text-[--activeColor]'>Contact Us</NavLink>
+                  <NavLink to="/contact" className='hover:text-[--activeColor]'>Contact Us</NavLink>
                 </li>
                 {/* <BiIcons.BiSearchAlt2 className="text-xl" /> */}
               </ul>
@@ -164,7 +164,7 @@ const Header = () => {
                 <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
-                    to="/avgna-live/"
+                    to="/"
                     onClick={() => setDrawerStatus(false)}
                   >
                     Home
@@ -173,7 +173,7 @@ const Header = () => {
                 <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
-                    to="/avgna-live/about"
+                    to="/about"
                     onClick={() => setDrawerStatus(false)}
                   >
                     About Us
@@ -182,7 +182,7 @@ const Header = () => {
                 <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
-                    to="/avgna-live/services"
+                    to="/services"
                     onClick={() => setDrawerStatus(false)}
                   >
                     Services & Products
@@ -191,7 +191,7 @@ const Header = () => {
                 <li className="px-1 py-2 hover:bg-slate-200">
                   <NavLink
                     className="block"
-                    to="/avgna-live/contact"
+                    to="/contact"
                     onClick={() => setDrawerStatus(false)}
                   >
                     Contact Us

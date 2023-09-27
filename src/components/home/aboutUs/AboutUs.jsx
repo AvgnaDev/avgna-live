@@ -82,7 +82,7 @@ const AboutUs = () => {
               {/* )}) */}
             </div>
             <div className="flex justify-center items-center my-6">
-              <Link to="/avgna-live/about">
+              <Link to="/about">
                 <button className="button--action button">Know more</button>
               </Link>
             </div>

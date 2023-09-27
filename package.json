@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "homepage": "https://avgna.com/",
+  "proxy":"https://avgna.com/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
